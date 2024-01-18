@@ -4,6 +4,15 @@
 #include "TankHead.h"
 #include "Tank.h"
 #include "Enemy.h"
+#include "Infomation.h"
+#include "Engine/Text.h"
+#include "Engine/Camera.h"
+
+namespace
+{
+	const int ENEMY_NUM{ 5 };
+}
+
 PlayScene::PlayScene(GameObject* parent)
 	:GameObject(parent,"PLAY_SCENE"),hModel_(-1)
 {
@@ -18,7 +27,12 @@ void PlayScene::Initialize()
 	Instantiate<Ground>(this);
 	Instantiate<Tank>(this);
 	//Instantiate<TankHead>(this);
-	Instantiate<Enemy>(this);
+	enemyNum = ENEMY_NUM;
+	for (int i = 0; i < enemyNum; i++)
+	{
+		Instantiate<Enemy>(this);
+	}
+	Instantiate<Infomation>(this);
 }
 
 void PlayScene::Update()
@@ -27,6 +41,7 @@ void PlayScene::Update()
 
 void PlayScene::Draw()
 {
+	
 }
 
 void PlayScene::Release()

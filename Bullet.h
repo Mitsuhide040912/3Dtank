@@ -1,5 +1,8 @@
 #pragma once
 #include "Engine/GameObject.h"
+class PlayScene;
+
+
 class Bullet :
     public GameObject
 {
@@ -7,6 +10,7 @@ class Bullet :
     XMFLOAT3 moveDir_;//Œü‚«‚ÌƒxƒNƒgƒ‹
     float bulletSpeed_;
     int speed_;
+    PlayScene* playScene_;
 public:
     Bullet(GameObject* parent);
     ~Bullet();
@@ -18,5 +22,6 @@ public:
 
     void SetMoveDir(XMFLOAT3 _move) { moveDir_ = _move; }
     void SetSpeed(float _speed) { bulletSpeed_ = speed_; }
+    void OnCollision(GameObject* pTarget)override;
 };
 

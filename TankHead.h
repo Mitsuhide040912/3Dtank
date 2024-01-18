@@ -5,6 +5,7 @@ class TankHead :
 {
 private:
     int hModel_;
+    XMFLOAT3 moveDir_;//向きのベクトル
 
 public:
 
@@ -19,5 +20,7 @@ public:
     /// </summary>
     /// <returns>int hModel:モデル番号</returns>
     int GetModelHandle() { return hModel_; }
+
+    
 };
 
