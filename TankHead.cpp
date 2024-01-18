@@ -29,7 +29,7 @@ void TankHead::Update()
 		transform_.rotate_.y += 2.0f;
 	}
 
-	if (Input::IsKeyDown(DIK_B))
+	if (Input::IsKeyDown(DIK_F))
 	{
 		XMFLOAT3 cannonTopPos = Model::GetBonePosition(hModel_, "CannonPos");
 		XMFLOAT3 cannonRootPos = Model::GetBonePosition(hModel_, "CannonRoot");

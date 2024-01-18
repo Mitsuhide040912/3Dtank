@@ -4,6 +4,7 @@ class PlayScene :
     public GameObject
 {
     int hModel_;
+    int enemyNum;
 public:
     PlayScene(GameObject* parent);
     ~PlayScene();
