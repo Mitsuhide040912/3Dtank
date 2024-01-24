@@ -4,6 +4,7 @@
 #include "TankHead.h"
 #include "Tank.h"
 #include "Enemy.h"
+
 #include "Infomation.h"
 #include "Engine/Text.h"
 #include "Engine/Camera.h"
@@ -11,6 +12,12 @@
 namespace
 {
 	const int ENEMY_NUM{ 5 };
+}
+
+namespace
+{
+	const int ENEMY_NUM{ 30 };
+
 }
 
 PlayScene::PlayScene(GameObject* parent)
@@ -28,11 +35,16 @@ void PlayScene::Initialize()
 	Instantiate<Tank>(this);
 	//Instantiate<TankHead>(this);
 	enemyNum = ENEMY_NUM;
+
 	for (int i = 0; i < enemyNum; i++)
 	{
 		Instantiate<Enemy>(this);
 	}
 	Instantiate<Infomation>(this);
+
+	for(int i=0;i<enemyNum; i++)
+	Instantiate<Enemy>(this);
+
 }
 
 void PlayScene::Update()
