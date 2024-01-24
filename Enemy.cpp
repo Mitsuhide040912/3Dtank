@@ -44,6 +44,9 @@ void Enemy::Initialize()
 	}
 	SphereCollider* spc = new SphereCollider({ 0,0,0 }, 0.5);
 	AddCollider(spc);
+
+
+	
 }
 
 void Enemy::Update()

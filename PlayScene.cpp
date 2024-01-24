@@ -14,11 +14,7 @@ namespace
 	const int ENEMY_NUM{ 5 };
 }
 
-namespace
-{
-	const int ENEMY_NUM{ 30 };
 
-}
 
 PlayScene::PlayScene(GameObject* parent)
 	:GameObject(parent,"PLAY_SCENE"),hModel_(-1)
