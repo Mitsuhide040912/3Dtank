@@ -4,7 +4,7 @@
 #include "TankHead.h"
 #include "Tank.h"
 #include "Enemy.h"
-
+#include "HUD.h"
 #include "Infomation.h"
 #include "Engine/Text.h"
 #include "Engine/Camera.h"
@@ -28,19 +28,19 @@ PlayScene::~PlayScene()
 void PlayScene::Initialize()
 {
 	Instantiate<Ground>(this);
-	Instantiate<Tank>(this);
+	player = Instantiate<Tank>(this);
 	//Instantiate<TankHead>(this);
 	enemyNum = ENEMY_NUM;
 
 	for (int i = 0; i < enemyNum; i++)
-	{
-		Instantiate<Enemy>(this);
-	}
-	Instantiate<Infomation>(this);
+	     Instantiate<Enemy>(this);
+	//pText = new Text;
+	//pText->Initialize();
+	//Instantiate<Infomation>(this);
 
-	for(int i=0;i<enemyNum; i++)
-	Instantiate<Enemy>(this);
-
+	/*for(int i=0;i<enemyNum; i++)
+	Instantiate<Enemy>(this);*/
+	Instantiate<HUD>(this);
 }
 
 void PlayScene::Update()
@@ -49,7 +49,7 @@ void PlayScene::Update()
 
 void PlayScene::Draw()
 {
-	
+	//pText->Draw(30, 30, "Mitsuhide");
 }
 
 void PlayScene::Release()

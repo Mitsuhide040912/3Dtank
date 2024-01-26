@@ -142,7 +142,6 @@ void Tank::Update()
 	{
 		Camera::SetPosition(transform_.position_);
 		XMFLOAT3 camTarget;
-
 		XMStoreFloat3(&camTarget, pos + move);
 		Camera::SetTarget(camTarget);
 		break;

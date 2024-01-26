@@ -34,12 +34,10 @@ void TankHead::Update()
 	{
 		XMFLOAT3 cannonTopPos = Model::GetBonePosition(hModel_, "CannonPos");
 		XMFLOAT3 cannonRootPos = Model::GetBonePosition(hModel_, "CannonRoot");
-		
-
 		XMVECTOR vtop = XMLoadFloat3(&cannonTopPos);
 		XMVECTOR vroot = XMLoadFloat3(&cannonRootPos);
-		
-        XMVECTOR moveDir = vtop - vroot;
+		XMVECTOR moveDir = vtop - vroot;
+
 		moveDir = XMVector3Normalize(moveDir);
 
 		XMFLOAT3 vmove;

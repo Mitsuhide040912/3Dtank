@@ -7,13 +7,13 @@ class HUD :
     public GameObject
 {
     string ConstructEnemyNumberString();
-    int hUD_;
-    int hNumber_;
+    //int hHUD_;
+    //int hNumber_;
 public:
     HUD(GameObject* parent);
     int hHUD_;
     int hNumbers_;
-    //int hkinoko_;
+    
     Transform tHud_;
     std::vector<Transform>tNumbers_;
 
