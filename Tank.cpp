@@ -69,11 +69,11 @@ void Tank::Update()
 	}
 
 #if 1
-	if (Input::IsKey(DIK_LEFT))
+	if (Input::IsKey(DIK_A))
 	{
 		transform_.rotate_.y -= 2.0f;
 	}
-	if (Input::IsKey(DIK_RIGHT))
+	if (Input::IsKey(DIK_D))
 	{
 		transform_.rotate_.y += 2.0f;
 	}
@@ -147,7 +147,8 @@ void Tank::Update()
 		Camera::SetTarget(camTarget);
 		break;
 	}
-
+	default:
+		break;
 	}
 
 }
