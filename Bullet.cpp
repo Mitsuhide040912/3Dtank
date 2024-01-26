@@ -60,5 +60,6 @@ void Bullet::OnCollision(GameObject* pTarget)
 		pTarget->KillMe();
 		Debug::Log(playScene_->GetObjectName());
 	}
+	
 	this->KillMe();
 }
