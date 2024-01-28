@@ -21,7 +21,7 @@ void TitleScene::Initialize()
 
 void TitleScene::Update()
 {
-	if (Input::IsKey(DIK_SPACE))
+	if (Input::IsKey(DIK_S))
 	{
 		SceneManager* pS = (SceneManager*)FindObject("SceneManager");
 		pS->ChangeScene(SCENE_ID_PLAY);
